@@ -30,12 +30,12 @@ Clase base con:
 - Datos comunes  
 - Login  
 
-#### 🧑‍🍳 Camarero (clase)
+#### Camarero (clase)
 - Usa el sistema  
 - Selecciona mesas  
 - Crea tickets  
 
-#### 👑 Administrador (clase)
+#### Administrador (clase)
 - Gestiona productos  
 - Consulta la caja  
 ---
