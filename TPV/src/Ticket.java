@@ -1,4 +1,3 @@
-package com.tpv.modelos;
 import java.util.ArrayList;
 
 public class Ticket {
