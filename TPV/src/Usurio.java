@@ -13,6 +13,6 @@ package com.tpv.usuarios;
 import com.tpv.modelos.Mesa;
 
 public class Camarero extends Usuario {
-    public void seleccionarMesa(Mesa m) { /* Lógica */ }
-    public void crearTicket(Mesa m) { /* Lógica */ }
+    public void seleccionarMesa(Mesa m) {  }
+    public void crearTicket(Mesa m) { }
 }
