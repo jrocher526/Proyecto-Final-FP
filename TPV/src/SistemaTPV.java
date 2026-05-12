@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class SistemaTPV {
     private Date fechaSesion;
     private float totalCaja;
