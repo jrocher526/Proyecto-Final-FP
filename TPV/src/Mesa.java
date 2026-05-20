@@ -4,7 +4,7 @@ public class Mesa {
     private EstadoMesa estado;
 
     // constructor
-    public Mesa(Integer numero, EstadoMesa estado inicial) {
+    public Mesa(Integer numero, EstadoMesa estadoInicial) {
         this.numero = numero;
         this.estado = estadoInicial;
     }
