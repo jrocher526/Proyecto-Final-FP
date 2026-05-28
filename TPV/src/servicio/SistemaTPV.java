@@ -2,6 +2,7 @@ package servicio;
 
 import modelo.Mesa;
 import modelo.Ticket;
+import utilidades.GestorFicheros;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -32,6 +33,7 @@ public class SistemaTPV {
         tickets.add(t);
         this.totalCaja += t.getTotal();
         this.numeroTickets++;
+        GestorFicheros.guardarVenta(t);
     }
 
     public void añadirMesa(Mesa mesa) {

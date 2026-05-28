@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="objectdb-2.9.5" level="project" />
+    <orderEntry type="library" name="javax.persistence-api-2.2" level="project" />
   </component>
 </module>

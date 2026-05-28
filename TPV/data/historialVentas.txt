@@ -1,0 +1,10 @@
+--TICKET--
+Fecha: Thu May 28 10:22:59 CEST 2026
+Ticket Nº: 1
+Mesa: 1
+Productos:
+- Cerveza -> 2.5 €
+- Hamburguesa -> 8.99 €
+TOTAL: 11.49 €
+----------------------
+
