@@ -9,5 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="objectdb-2.9.5" level="project" />
     <orderEntry type="library" name="javax.persistence-api-2.2" level="project" />
+    <orderEntry type="library" name="ojdbc17" level="project" />
+    <orderEntry type="library" name="mariadb-java-client-3.5.8" level="project" />
   </component>
 </module>

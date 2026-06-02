@@ -2,19 +2,27 @@ package modelo;
 
 import enums.Categoria;
 
-/**
- * Esta clase representa cualquier articulo que tengamos en la carta.
- * Sirve para mantener los productos ordenados.
- */
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+
+@Entity
 public class Producto {
 
-    // Atributos
-    private int id;              // Codigo identificador
+    @Id
+    private int id;
+
     private String nombre;
-    private Categoria categoria; // Si es bebida, comida, postre, etc.
+
+    @Enumerated(EnumType.STRING)
+    private Categoria categoria;
+
     private double precio;
 
-    // Constructor
+    public Producto() {
+    }
+
     public Producto(int id, String nombre, Categoria categoria, double precio) {
         this.id = id;
         this.nombre = nombre;
@@ -22,15 +30,11 @@ public class Producto {
         this.precio = precio;
     }
 
-    /**
-     * Método Para mostrar la información de los productos
-     */
     @Override
     public String toString() {
         return nombre + " - " + precio + "€";
     }
 
-    // Getters y Setters
     public int getId() {
         return id;
     }

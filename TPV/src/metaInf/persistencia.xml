@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="
+             http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+
+    <persistence-unit name="TPV">
+
+        <provider>com.objectdb.jpa.Provider</provider>
+
+        <class>modelo.Usuario</class>
+        <class>modelo.Camarero</class>
+        <class>modelo.Administrador</class>
+        <class>modelo.Producto</class>
+        <class>modelo.Mesa</class>
+        <class>modelo.Ticket</class>
+
+        <properties>
+
+            <property
+                    name="javax.persistence.jdbc.url"
+                    value="$objectdb/db/tpv_objetos.odb"/>
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
