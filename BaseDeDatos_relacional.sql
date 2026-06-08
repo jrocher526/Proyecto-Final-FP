@@ -1,47 +1,41 @@
-CREATE DATABASE IF NOT EXISTS tpv_relacional;
+-- 1. Crear la base de datos y usarla
+CREATE DATABASE IF NOT EXISTS tpv_restaurante;
+USE tpv_restaurante;
 
-USE tpv_relacional;
-
+-- 2. Crear tabla de Usuarios
 CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
-    password VARCHAR(100) NOT NULL,
-    rol VARCHAR(20) NOT NULL
+    password VARCHAR(50) NOT NULL,
+    rol VARCHAR(20) DEFAULT 'CAMARERO'
 );
 
-CREATE TABLE mesas (
-    numero INT PRIMARY KEY,
-    estado VARCHAR(30) NOT NULL
-);
-
+-- 3. Crear tabla de Productos
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     categoria VARCHAR(50) NOT NULL,
-    precio DECIMAL(6,2) NOT NULL
+    precio DECIMAL(10, 2) NOT NULL
 );
 
+-- 4. Crear tabla de Tickets
 CREATE TABLE tickets (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    numero_ticket INT NOT NULL,
-    numero_mesa INT NOT NULL,
-    total DECIMAL(8,2) NOT NULL,
-    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-    FOREIGN KEY (numero_mesa)
-        REFERENCES mesas(numero)
+    total DECIMAL(10, 2) NOT NULL,
+    observaciones TEXT,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE ticket_productos (
-    id_ticket INT,
-    id_producto INT,
-    cantidad INT DEFAULT 1,
+-- Insertar datos
 
-    PRIMARY KEY (id_ticket, id_producto),
+-- Insertar usuarios iniciales
+INSERT INTO usuarios (nombre, password, rol) VALUES ('admin', '1234', 'ADMINISTRADOR');
+INSERT INTO usuarios (nombre, password, rol) VALUES ('david', '2004', 'CAMARERO');
 
-    FOREIGN KEY (id_ticket)
-        REFERENCES tickets(id),
-
-    FOREIGN KEY (id_producto)
-        REFERENCES productos(id)
-);
+-- Insertar productos en la carta
+INSERT INTO productos (nombre, categoria, precio) VALUES ('Cerveza', 'BEBIDA', 2.50);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('Refresco', 'BEBIDA', 2.00);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('Agua', 'BEBIDA', 1.50);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('Patatas Bravas', 'COMIDA', 4.50);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('Bocadillo Calamares', 'COMIDA', 5.00);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('Tarta de Queso', 'POSTRE', 3.50);

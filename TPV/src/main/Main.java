@@ -15,11 +15,11 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        // 1. Instanciamos en memoria el primer objeto visual de nuestro TPV: la pantalla de bienvenida.
+        // Instanciamos en memoria el primer objeto visual de nuestro TPV: la pantalla de bienvenida.
         // Al hacer el 'new', se ejecuta el constructor de VentanaLogin y se prepara toda su interfaz.
         VentanaLogin ventana = new VentanaLogin();
 
-        // 2. Le pedimos al sistema operativo que dibuje la ventana en la pantalla.
+        // Le pedimos al sistema operativo que dibuje la ventana en la pantalla.
         // Si no ponemos esto en true, el programa estaría corriendo en segundo plano pero sería invisible.
         ventana.setVisible(true);
     }
