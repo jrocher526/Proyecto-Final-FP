@@ -30,12 +30,12 @@ CREATE TABLE tickets (
 
 -- Insertar usuarios iniciales
 INSERT INTO usuarios (nombre, password, rol) VALUES ('admin', '1234', 'ADMINISTRADOR');
-INSERT INTO usuarios (nombre, password, rol) VALUES ('david', '2004', 'CAMARERO');
+INSERT INTO usuarios (nombre, password, rol) VALUES ('DAVID', '2004', 'CAMARERO');
 
 -- Insertar productos en la carta
-INSERT INTO productos (nombre, categoria, precio) VALUES ('Cerveza', 'BEBIDA', 2.50);
-INSERT INTO productos (nombre, categoria, precio) VALUES ('Refresco', 'BEBIDA', 2.00);
-INSERT INTO productos (nombre, categoria, precio) VALUES ('Agua', 'BEBIDA', 1.50);
-INSERT INTO productos (nombre, categoria, precio) VALUES ('Patatas Bravas', 'COMIDA', 4.50);
-INSERT INTO productos (nombre, categoria, precio) VALUES ('Bocadillo Calamares', 'COMIDA', 5.00);
-INSERT INTO productos (nombre, categoria, precio) VALUES ('Tarta de Queso', 'POSTRE', 3.50);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('CERVEZA', 'BEBIDA', 2.50);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('REFRESCO', 'BEBIDA', 2.00);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('AGUA', 'BEBIDA', 1.50);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('PATATAS BRAVAS', 'COMIDA', 4.50);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('BOCADILLO CALAMARES', 'COMIDA', 5.00);
+INSERT INTO productos (nombre, categoria, precio) VALUES ('TARTA DE QUESO', 'POSTRE', 3.50);
