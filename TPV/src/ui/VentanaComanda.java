@@ -81,7 +81,7 @@ public class VentanaComanda extends Frame {
                 fw.write(ticket.toString());
                 fw.write("\n¡Gracias por su visita!");
                 fw.close();
-                MensajesAWT.mostrarMensaje(this, "Ticket impreso en tu Escritorio.", "Éxito");
+                MensajesAWT.mostrarMensaje(this, "Ticket impreso.", "Éxito");
             } catch (IOException ex) {
                 MensajesAWT.mostrarMensaje(this, "Error al generar el archivo.", "Error");
             }
