@@ -1,13 +1,14 @@
 package modelo;
 
 import excepciones.MesaException;
+import ui.VentanaMesas;
 
 /**
  * Representa una mesa física dentro de la sala del restaurante.
  * Es una clase clave porque actúa como "puente" entre el mundo visual (los botones azules o rojos)
  * y la lógica de negocio (el ticket con la cuenta y los productos).
  */
-public class Mesa {
+public class Mesa extends VentanaMesas {
 
     // ATRIBUTOS
     private int numero;
